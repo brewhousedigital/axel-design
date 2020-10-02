@@ -11,24 +11,34 @@
 
 	{% include "_includes/components/head-css-tags.njk" %}
 </head>
-<body>
+<body class="{{ bodyClass }}">
 
 <header class="container">
-	<div class="row justify-content-between py-3 mb-5">
-		<h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+	<nav class="d-flex flex-wrap align-items-center justify-content-between">
+		<div class="col-xl col-12 pb-0 text-xl-left text-center">
+			<a href="/" class="logo"><h1>{{ metadata.title }}</h1></a>
+		</div><!-- end col -->
 
-		<div>
-			<a href="/posts/" class="btn btn-primary">Posts</a>
-			<a href="/about/" class="btn btn-primary">About</a>
-		</div>
-	</div><!-- end row -->
+		<div class="col-xl col-12 pb-0 text-xl-right text-center">
+			<a href="/" class="btn">Home</a>
+			<a href="/work/" class="btn">Work</a>
+			<a href="/contact/" class="btn">Contact</a>
+		</div><!-- end col -->
+	</nav><!-- end row -->
 </header><!-- end container -->
+
 
 <main>
 	{{ content | safe }}
 </main>
 
-<footer></footer>
+
+<footer class="text-center py-5">
+	<div class="container">
+		<p>Copyright © {% dateYear %} Axel Lurssen, all rights reserved.</p>
+		<p>Built by <a href="https://www.brewhouse.digital?source=axeldesign" target="_blank" rel="noopener">Brewhouse Digital, LLC</a></p>
+	</div><!-- end container -->
+</footer>
 
 
 

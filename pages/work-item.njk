@@ -1,0 +1,73 @@
+---
+pagination:
+  data: works
+  size: 1
+  alias: work
+permalink: /work/{{ work.name|slugURL }}/
+layout: layouts/base.njk
+---
+
+
+<div class="container py-5 text-xl-left text-center">
+	<h2 class="mb-5 display-1">{{ work.name }}</h2>
+
+	<div class="row justify-content-between">
+		<div class="col-xl-6 mb-5">
+			<img src='/images/works/{{ work.name|slugURL }}-preload.jpg'
+				 data-src='/images/works/{{ work.name|slugURL }}.jpg'
+				 alt='{{ work.name }}'
+				 class='lazy-load img-fluid rounded'
+				 loading='lazy'>
+		</div><!-- end col -->
+
+		<div class="col-xl-5 mb-5">
+			<form id="orderForm"
+				  class="position-sticky order-print-form"
+				  name="AxelDesign-OrderForm-{{ work.name|slugURL }}"
+				  netlify
+				  netlify-honeypot="testing-input"
+				  method="POST">
+				<h2 class="mb-5">Place an order</h2>
+				<div class="form-group">
+					<label for="formName">Name</label>
+					<input type="text" class="form-control" id="formName" name="name">
+				</div><!-- end form group -->
+
+				<div class="form-group">
+					<label for="formEmail">Email</label>
+					<input type="text" class="form-control" id="formEmail" name="email">
+				</div><!-- end form group -->
+
+				<div class="form-group">
+					<label for="formSize">Size</label>
+					<select class="form-control" id="formSize" name="size">
+						<option>5x7 - $4</option>
+						<option>8x10 - $6</option>
+						<option>12x18 - $14</option>
+						<option>16x20 - $20</option>
+						<option>24x30 - $50</option>
+					</select>
+				</div><!-- end form group -->
+
+				<div class="form-group">
+					<label for="formMessage">Special Requests?</label>
+					<textarea class="form-control" id="formMessage" rows="4" name="message"></textarea>
+				</div><!-- end form group -->
+
+				<div class="d-none">
+					<label for="testing-input" class="sr-only">Testing Input</label>
+					<input type="text"
+						   name="testing-input"
+						   id="testing-input"
+						   placeholder="Video URL">
+				</div><!-- end from group -->
+
+				<input type="hidden" name="art-piece" value="{{ work.name }}">
+
+				<div class="form-group">
+					<button class="btn contact-form-btn" type="submit">Send</button>
+				</div><!-- end form group -->
+			</form>
+		</div><!-- end col -->
+	</div><!-- end row -->
+</div><!-- end container -->

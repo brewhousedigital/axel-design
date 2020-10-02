@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+permalink: /work/
+---
+
+
+<div class="container py-5">
+	<h2 class="mb-5 display-1">Work</h2>
+
+	<div class="row">
+		{% for item in works %}
+		<div class="col-xl-4 mb-5">
+			<a href="/work/{{ item.name|slugURL }}/" class="d-block">
+				<img src='/images/works/{{ item.name|slugURL }}-preload.jpg'
+					 data-src='/images/works/{{ item.name|slugURL }}.jpg'
+					 alt='{{ item.name }}'
+					 class='lazy-load img-fluid rounded works-images position-relative'
+					 loading='lazy'
+					 style="">
+			</a>
+		</div><!-- end grid item -->
+		{% endfor %}
+	</div><!-- end grid -->
+</div><!-- end container -->

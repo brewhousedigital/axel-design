@@ -3,3 +3,9 @@ node_modules/
 package-lock.json
 .idea
 _site
+
+
+# Files
+images/logo-site-icon.psd
+images/logo-and-opengraph-image.psd
+

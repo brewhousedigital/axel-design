@@ -1,0 +1,83 @@
+body {
+	font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+.order-print-form {
+	top: 30px;
+}
+
+.form-group {
+	margin-bottom: 2rem;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.font-weight-500 {
+	font-weight: 500!important;
+}
+
+nav {
+	padding: 15px 0;
+}
+
+nav .logo {
+	text-decoration: none!important;
+	display: inline-block;
+	font-size: 30px;
+	font-weight: 100;
+	color: #222222;
+}
+
+nav .btn {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.contact-card {
+	max-width: 375px;
+	background-color: #fff;
+}
+
+.contact-us-bg {
+	background-image: url("/images/dfw-map.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.contact-form-btn {
+	color: #ffffff;
+	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
+	padding: 10px 40px;
+	background-color: #08AEEA;
+	background-image: linear-gradient(15deg, #08AEEA 0%, #2AF598 100%);
+	border: 0;
+}
+
+.contact-form-btn:focus, .contact-form-btn:hover {
+	color: #ffffff;
+	background-image: linear-gradient(15deg, #0893c5 0%, #24c57b 100%);
+}
+
+.form-control {
+	border-color: rgba(0,0,0,0.1);
+	border-width: 1px;
+}
+
+.works-images {
+
+}
+
+

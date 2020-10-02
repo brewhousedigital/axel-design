@@ -1,3 +1,5 @@
 @media screen and (max-width: 1159px) {
-
+	.works-images {
+		transform: rotate3d(1, 1, 1, 0deg);
+	}
 }

@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+permalink: /contact/
+---
+
+
+
+<div class="container py-5">
+	<div class="contact-us-bg rounded p-5">
+		<div class="contact-us-box">
+			<div class="p-4 rounded ml-auto border-0 contact-card">
+				<h1>Custom Work <br>&amp; Inquiries</h1>
+				<hr>
+
+				<form name="AxelDesign-Contact"
+					  netlify
+					  netlify-honeypot="testing-input"
+					  method="POST">
+					<div class="form-group">
+						<label for="formName">Name</label>
+						<input type="text" class="form-control" id="formName" name="name">
+					</div><!-- end form group -->
+
+					<div class="form-group">
+						<label for="formEmail">Email</label>
+						<input type="text" class="form-control" id="formEmail" name="email">
+					</div><!-- end form group -->
+
+					<div class="form-group">
+						<label for="formMessage">What do you need?</label>
+						<textarea class="form-control" id="formMessage" rows="4" name="message"></textarea>
+					</div><!-- end form group -->
+
+					<div class="d-none">
+						<label for="testing-input" class="sr-only">Testing Input</label>
+						<input type="text"
+							   name="testing-input"
+							   id="testing-input"
+							   placeholder="Video URL">
+					</div><!-- end from group -->
+
+					<div class="form-group">
+						<button class="btn contact-form-btn" type="submit">Send</button>
+					</div><!-- end form group -->
+				</form>
+
+			</div><!-- end card -->
+		</div><!-- end contact box -->
+	</div><!-- end contact us bg -->
+</div>
